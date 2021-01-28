@@ -4,7 +4,7 @@ while True:
     try:
         first = randint(0,100)
         second = randint(0,100)
-
+        #enerates question and takes user input (answer)
         print(first, "+", second)
         answer = input("Answer:", )
 
@@ -13,5 +13,6 @@ while True:
             print("Good Job!")
         else:
             print("Bad Luck")
+        #protects the program from crashing from a non-numerical input
     except ValueError:
         print("Not a valid input")
