@@ -1,14 +1,17 @@
 from random import randint
 
 while True:
-    first = randint(0,100)
-    second = randint(0,100)
-    user = input("Press the enter key", )
-    if user == "":
-        print(first, "+", second)
-    answer = input("Answer:", )
-    if first+second == int(answer):
-        print("Good Job!")
-    else:
-        print("Bad Luck")
+    try:
+        first = randint(0,100)
+        second = randint(0,100)
 
+        print(first, "+", second)
+        answer = input("Answer:", )
+
+        #checks that the user input matches the expected (correct) annswer and prints feedback
+        if first+second == int(answer):
+            print("Good Job!")
+        else:
+            print("Bad Luck")
+    except ValueError:
+        print("Not a valid input")
